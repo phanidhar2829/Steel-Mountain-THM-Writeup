@@ -22,7 +22,7 @@ nmap -sV <TARGET_IP>
 ```
 ![Nmap Scan](https://github.com/phanidhar2829/Steel-Mountain-THM-Writeup/blob/8ea7da0483463697b4ffa8b992665372d1447dce/scrshots/nmap.png)
 
-```Q1. Who is the employee of the month?
+Q1. Who is the employee of the month?
 (Hint: Reverse the image)
-```
-
+Answer:
+![emp img](scrshots/emp.png)
