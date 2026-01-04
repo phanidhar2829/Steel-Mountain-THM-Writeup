@@ -27,7 +27,9 @@ Q1. Who is the employee of the month?
 Answer:
 ![emp img](scrshots/emp.png)
 
-Q2.Scan the machine with nmap. What is the other port running a web server on? 
--answer:8080
-Q3.Take a look at the other web server. What file server is running?
--answer:
+**Q2.** Scan the machine with nmap. What is the other port running a web server on?
+- **Answer:** 8080
+
+**Q3.** Take a look at the other web server. What file server is running?
+- **Answer:** Rejetto HTTP File Server
+
