@@ -19,5 +19,6 @@ The `-sV` flag was used to detect service versions, which helps in identifying p
 
 ```bash
 nmap -sV <TARGET_IP>
+```
 ![Nmap Scan](https://github.com/phanidhar2829/Steel-Mountain-THM-Writeup/blob/8ea7da0483463697b4ffa8b992665372d1447dce/scrshots/nmap.png)
 
