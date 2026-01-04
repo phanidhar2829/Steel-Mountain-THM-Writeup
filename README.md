@@ -102,6 +102,8 @@ To enumerate this machine, we will use a powershell script called PowerUp, that'
    **Q7. What is the root flag?**
    **Look at the netcat listener we got a root shell**
    ![emp img](scrshots/root.png)
+   
   **Q8.What powershell -c command could we run to manually find out the service name? **
+
    **Answer:powershell -c "get-service"**
 
