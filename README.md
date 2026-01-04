@@ -22,7 +22,12 @@ nmap -sV <TARGET_IP>
 ```
 ![Nmap Scan](https://github.com/phanidhar2829/Steel-Mountain-THM-Writeup/blob/8ea7da0483463697b4ffa8b992665372d1447dce/scrshots/nmap.png)
 
-Q1. Who is the employee of the month? \n
+Q1. Who is the employee of the month? 
 (Hint: Reverse the image)
 Answer:
 ![emp img](scrshots/emp.png)
+
+Q2.Scan the machine with nmap. What is the other port running a web server on? 
+-answer:8080
+Q3.Take a look at the other web server. What file server is running?
+-answer:
